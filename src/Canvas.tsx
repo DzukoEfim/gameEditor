@@ -1,7 +1,14 @@
-import { useRef, useEffect, memo } from 'react';
+import {
+    useRef, useEffect, memo, FC,
+} from 'react';
 import { main } from './canvas/';
 
-export const Canvas = memo(() => {
+type Props = {
+    width: number,
+    height: number
+}
+
+export const Canvas: FC<Props> = memo(({ width, height }) => {
     const canvasRef = useRef<HTMLCanvasElement | null>(null);
 
     useEffect(() => {
@@ -12,5 +19,5 @@ export const Canvas = memo(() => {
         }
     }, []);
 
-    return <canvas ref={canvasRef} />;
+    return <canvas height={height} width={width} ref={canvasRef} />;
 });

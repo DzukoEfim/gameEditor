@@ -81,7 +81,7 @@ export const Playground = () => {
                 >
                   resize
                 </Box>
-                <Canvas />
+                <Canvas width={size.x} height={size.y} />
             </Box>
         </Box>
     );
