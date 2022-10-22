@@ -4,6 +4,7 @@ import {
 import { Box } from '@mui/system';
 import { useState } from 'react';
 import MenuIcon from '@mui/icons-material/Menu';
+import { Playground } from './Playground';
 
 export const App = () => {
     const [isDrawerOpen, setDrawerState] = useState(true);
@@ -55,25 +56,21 @@ export const App = () => {
                 }}
             >
                 <Toolbar />
+
                 <Box sx={{
-                    overflow: 'auto',
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
                     height: '100%',
+                    p: 1,
+                    overflow: 'auto',
+                    backdropFilter: 'blur(3px)',
                 }}
                 >
-                    <Box sx={{
-                        display: 'flex',
-                        justifyContent: 'center',
-                        alignItems: 'center',
-                        height: '100%',
-                        p: 1,
-
-                        backdropFilter: 'blur(3px)',
-                    }}
-                    >
-                        <Button variant="contained">Load SpriteSheet</Button>
-                    </Box>
+                    <Button variant="contained">Load SpriteSheet</Button>
                 </Box>
             </Drawer>
+            <Playground />
         </Box>
     );
 };

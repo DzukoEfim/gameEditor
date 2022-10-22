@@ -4,6 +4,8 @@
     "allowJs": false,
     "target": "ES6",
     "sourceMap": true,
+    "noImplicitAny": true,
+    "strict": true,
     "jsx": "react-jsx",
     "module": "esnext",
     "moduleResolution": "Node",
