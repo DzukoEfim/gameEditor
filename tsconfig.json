@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "outDir": "./compiled",
+    "allowJs": false,
+    "target": "ES6",
+    "sourceMap": true,
+    "jsx": "react-jsx",
+    "module": "esnext",
+    "moduleResolution": "Node",
+  },
+  "include": ["./src/**/*", "src/types", "./d.ts"],
+  "exclude": ["./node_modules"]
+}
